@@ -1,0 +1,699 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Travel Turismo Brasil</title>
+	<meta charset="utf-8" />
+
+	<!-- define a viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- inserindo css do Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" />
+
+	<!-- inserindo css do Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+
+	<!-- CSS personalizado -->
+	<link rel="stylesheet" href="css/estilos.css" media="all" />
+
+	<!-- JQuery da galeria -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$(".thumbnail").click(function () {
+				var address = $(this).attr("src");
+				$("#popup").fadeIn("slow");
+				$("#lightbox").attr("src", address);
+			});
+			$("#close").click(function () {
+				$("#popup").fadeOut("fast");
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		#popup {
+			background: #000000;
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		#center {
+			border: 10px solid #121212;
+			margin: 6% auto;
+			width: 750px;
+		}
+
+		#close {
+			float: right;
+			position: absolute;
+			top: 12%;
+		}
+
+		​
+	</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Cabeçalho do menu -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Travel Turismo</a>
+			</div>
+
+			<!-- itens do menu -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="#quemsomos">A empresa</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Destinos<span
+							 class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#buzios">Búzios</a></li>
+							<li><a href="#fortaleza">Fortaleza</a></li>
+							<li><a href="#maresias">Maresias</a></li>
+							<li><a href="#natal">Natal</a></li>
+							<li><a href="#portoseguro">Porto Seguro</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#depoimentos">Depoimentos</a></li>
+					<li><a href="#galeria">Galeria</a></li>
+					<li><a href="#faleconosco">Fale conosco</a></li>
+				</ul>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	​
+	<!-- Slider da aplicação -->
+	<div class="divslider" style="background-color: black;">
+		<div class="container-slider">
+			<div class="col-xs-12 hidden-xs">
+				<div id="sliderprincipal" class="carousel slide" data-ride="carousel" data-interval="5000" style="width:100%;">
+
+					<ol class="carousel-indicators">
+						<li class="active" data-target="#sliderprincipal" data-slide-to="0"></li>
+						<li data-target="#sliderprincipal" data-slide-to="1"></li>
+						<li data-target="#sliderprincipal" data-slide-to="2"></li>
+						<li data-target="#sliderprincipal" data-slide-to="3"></li>
+					</ol>
+
+					<div class="carousel-inner" role="listbox">
+
+						<div class="item active">
+							<img src="imagens/praia01.jpg" alt="Imagem slider 01" style="width: 100%;" />
+						</div>
+
+						<div class="item">
+							<img src="imagens/praia02.jpg" alt="Imagem slider 02" style="width: 100%;" />
+						</div>
+
+						<div class="item">
+							<img src="imagens/praia03.jpg" alt="Imagem slider 03" style="width: 100%;" />
+						</div>
+						<div class="item">
+							<img src="imagens/praia04.jpg" alt="Imagem slider 04" style="width: 100%;" />
+						</div>
+					</div>
+
+					<!-- Controles -->
+
+					<a class="left carousel-control" href="#sliderprincipal" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+
+					<a class="right carousel-control" href="#sliderprincipal" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Próximo</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Fim do slider da aplicação -->​
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+				<div>
+					<i class="fa fa-plane fa-5x" aria-hidden="true">
+					</i>
+				</div>
+				<div class="caption">
+					<h3>Passagens Aéreas</h3>
+					<p>Aqui você encontra as melhores ofertas e oportunidades de voar nas melhores comoanhias do mundo.</p>
+					<p><a href="https://www.decolar.com/" target="_blank" class="btn btn-success" role="button">Pesquisar</a></p>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+				<div>
+					<i class="fa fa-bed fa-5x" aria-hidden="true"">
+					</i>
+				</div>
+				<div class=" caption">
+						<h3>Hotéis</h3>
+						<p>Os melhores hotéis, com os melhores preços para que sua viagem seja ainda mais especial e aconchegante.</p>
+						<p><a href="https://www.trivago.com.br/" target="_blank" class="btn btn-success" role="button">Pesquisar</a></p>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+				<div>
+					<i class="fa fa-car fa-5x" aria-hidden="true">
+					</i>
+				</div>
+				<div class="caption">
+					<h3>Carros</h3>
+					<p>Alugue um carro para curtir com sua familia e fazer com que sua viagem seja ainda mais agradável.</p>
+					<p><a href="https://www.movida.com.br/" target="_blank" class="btn btn-success" role="button">Pesquisar</a></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- área de seleção de destino-->
+	<div class="row linhaCompra" style="background-color: #2E64FE;">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<botton class="btn btn-info col-xs-12 col-sm-12 col-md-2 col-lg-2 botaoCompra">
+				<div style="float:left;">
+					<i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+				</div>
+
+				<div class="botaoCompraLegenda">
+					Comprar<br />
+					Passagem
+				</div>
+			</botton>
+
+			<input class=" col-xd-12 col-sm-12 col-md-3 col-lg-3 camposCompra" type="text" name="origem" placeholder="Digite a origem" />
+			<input class=" col-xd-12 col-sm-12 col-md-3 col-lg-3 camposCompra" type="text" name="destino" placeholder="Digite o destino" />
+
+			<botton class="btn btn-info col-xs-12 col-sm-12 col-md-2 col-lg-2 botaoCompra">
+				<div style="float:left;">
+					<i class="fa fa-clock-o fa-2x" aria-hidden="true"></i>
+				</div>
+
+				<div class="botaoCompraLegenda">
+					Fazer<br />
+					Check-in
+				</div>
+			</botton>
+
+			<botton class="btn btn-info col-xs-12 col-sm-12 col-md-2 col-lg-2 botaoCompra">
+				<div style="float:left;">
+					<i class="fa fa-check fa-2x" aria-hidden="true"></i>
+				</div>
+
+				<div class="botaoCompraLegenda">
+					Status<br />
+					de Voo
+				</div>
+			</botton>
+
+
+		</div>
+
+	</div>
+	<!--fim da area de destino-->
+
+	<!--area de conteudo do site-->
+	<section id="quemsomos">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Quem Somos</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/aempresa.jpg" alt="Conheça a Travel Turismo" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						A Travel Turismo Brasil é uma agência que trabalha com uma proposta diferenciada no mercado: Atendimento
+						personalizado ao cliente.
+						Ao entrar em contato conosco você será atendido por pessoas que realmente conhecem o assunto, sendo informado
+						sobre os melhores destinos, os melhores hotéis e os preços mais baixos, além de locais para diversão e
+						entretenimento. Tudo de acordo com o seu gosto e o seu bolso.
+						Nossa equipe é composta de profissionais competentes e totalmente qualificados na área, além de uma estrutura
+						organizada e preparada para receber bem e satisfazer suas necessidades. Nossa missão é trabalhar para que o
+						cliente desfrute da satisfação de viajar em sua plenitude.
+						Entre os serviços oferecidos pela Travel Turismo Brasil podemos destacar:
+						• Sistema "on line" de reservas e emissões de passagens aéreas nacionais e internacionais com todas as companhias
+						aéreas.
+						• Sistema de emissão de bilhete eletrônico ("e-ticket") com todas as companhias aéreas que dispõe dessa
+						modalidade de serviços.
+						• Sistema de reservas e informações de hotéis no Brasil e exterior.
+						• Aluguel de veículos no Brasil e exterior.
+						• Serviços de traslados aeroporto/hotel/aeroporto, "city tour" e passeios específicos de interesse.
+						• Preparação de pacotes de viagens nacionais e internacionais, individuais, para famílias, grupos de pessoas e
+						empresas em geral.
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="buzios">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Búzios</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/buzios.jpg" alt="Conheça a Travel Turismo" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p><strong>Armação dos Búzios</strong>, ou apenas Búzios, como é popularmente conhecido, é um município da
+							Microrregião dos Lagos, no estado do Rio de Janeiro, no Brasil. Faz divisa a oeste com Cabo Frio, município do
+							qual se tornou autônomo em 1995. Localiza-se a cerca de 173 quilômetros do centro da capital do estado.</p>
+						<p>É uma península com oito quilômetros de extensão e 23 praias, recebendo de um lado correntes marítimas do
+							Equador e do outro correntes marítimas do polo sul, o que faz com que tenha praias tanto de águas mornas quanto
+							de águas geladas. Entre as principais praias, destacam-se Geribá, Tucuns, João Fernandes, Ferradura,
+							Ferradurinha, Armação, Manguinhos, Tartaruga, Ossos, Brava e Olho-de-Boi, esta última reservada para a prática
+							do naturismo.</p>
+						<p>A exploração turística e a ocupação imobiliária do local tiveram início após a fama internacional dada a
+							Búzios pela atriz francesa Brigitte Bardot, que a visitou em 1964. Hoje, a cidade é tão visitada por turistas do
+							mundo inteiro que alguns a chamam de "a Saint-Tropez brasileira".</p>
+						<p>rmação dos Búzios, com seus ventos fortes, é ideal para a prática de iatismo e voo livre. É uma cidade que
+							abriga diversas culturas, com um grande número de estrangeiros. A temperatura média anual é de 24 °C e tem o
+							índice pluviométrico mais baixo do estado de Rio de Janeiro: cerca de 750 milímetros anuais apenas.</p>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="fortaleza">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Fortaleza</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/fortaleza.jpg" alt="Conheça a Travel Turismo" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p><strong>Fortaleza</strong> é um município brasileiro, capital do estado do Ceará, situado na região Nordeste
+							do país. Pertence à mesorregião Metropolitana de Fortaleza e à microrregião de Fortaleza. Distante 2 285 km de
+							Brasília, capital federal, a cidade desenvolveu-se às margens do riacho Pajeú, e sua toponímia é uma alusão ao
+							Forte Schoonenborch, o qual deu origem ao município, construído pelos holandeses durante sua segunda permanência
+							no local, entre 1649 e 1654. O lema de Fortaleza, presente em seu brasão, é a palavra em latim Fortitudine, que,
+							em português, significa "força, valor, coragem".</p>
+						<p>Está localizada no litoral Atlântico, a uma altitude média de dezesseis metros, com 34 km de praias. Fortaleza
+							possui 313,140 km² de área e 2 609 716 habitantes estimados em 2016, além da maior densidade demográfica entre
+							as capitais do país, com 8 334,0 hab/km². É a maior cidade do Ceará em população e a quinta do Brasil. A Região
+							Metropolitana de Fortaleza é a sexta mais populosa do Brasil e a primeira do Norte e Nordeste, com 4 019 213
+							habitantes em 2016. É a cidade nordestina com a maior área de influência regional e possui a terceira maior rede
+							urbana do Brasil em população, atrás apenas de São Paulo e do Rio de Janeiro.</p>
+						<p>Fortaleza foi no ano de 2014 a décima segunda cidade mais rica do país em PIB e a mais rica do Nordeste, com
+							56 bilhões de reais. Possui, ainda, a terceira região metropolitana mais rica das regiões Norte e Nordeste. É
+							importante centro industrial e comercial do Brasil, com o oitavo maior poder de compra municipal da nação. No
+							turismo, a cidade alcançou as marcas de segundo destino mais desejado do Brasil e quarta cidade brasileira que
+							mais recebe turistas de acordo com o Ministério do Turismo. É sede do Banco do Nordeste, da Transnordestina
+							Logística e do DNOCS. A BR-116, a mais importante rodovia do país, começa em Fortaleza. O município faz parte do
+							Mercado Comum de Cidades do Mercosul.</p>
+						<p>Batizada de Loira Desposada do Sol pelos versos do poeta Paula Ney, a metrópole cearense é a terra natal de
+							brasileiros de grande renome como o ex-presidente Castelo Branco e Dom Hélder Câmara, assim como Capistrano de
+							Abreu, Gustavo Barroso, Casimiro Montenegro Filho, José de Alencar, Karim Aïnouz, Maurício Peixoto e Rachel de
+							Queiroz. É a capital brasileira mais próxima da Europa, a 5 608 km de Lisboa, em Portugal.</p>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="maresias">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Maresias</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/maresias.jpg" alt="Conheça a Travel Turismo" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p><strong>Maresias</strong> é um bairro localizado na estância balneária brasileira de São Sebastião no estado
+							de São Paulo, na Região Sudeste do Brasil.</p>
+						<p>A praia de Maresias, localizada no bairro homônimo, é procurada por praticantes de surfe, que a desbravaram na
+							década de 1980 para a prática, na época acessível por uma estrada de terra nativa, ou seja, em precárias
+							condições. A praia tem fortes arrebentações provocadas por um parcel.</p>
+						<p>Está localizada em um eixo agitado da região que compreende ainda as praias de Boiçucanga, Cambury e Juqueí.
+							Encontra-se a 25 km do centro de São Sebastião e a 176 km de São Paulo. Possui boa infraestrutura turística com
+							bares, restaurantes, hotéis, pousadas, campings e danceterias.</p>
+						<p><strong>Surf</strong></p>
+						<p>A Praia de Maresias é internacionalmente conhecida, pois oferece areias brancas e ondas grandes, formando um
+							cenário para as competições de surf. Suas ondas já foram aproveitadas em etapas de campeonatos mundiais de surf
+							e são utilizadas durante o ano todo para competições menores[1]. Ocorrem campeonatos nacionais e internacionais
+							de surf, com adeptos de todo o Brasil e da América do Sul.</p>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="natal">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Natal</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/natal.jpg" alt="Conheça a Travel Turismo" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p><strong>Natal</strong> é um município brasileiro, capital do estado do Rio Grande do Norte, Região Nordeste do
+							país. Pertence à Mesorregião do Leste Potiguar e à Microrregião de Natal. Com uma área de aproximadamente 167
+							km², é a segunda capital brasileira com a menor área territorial (maior apenas que Vitória, capital do Espírito
+							Santo), fazendo desta a sexta maior capital do país em densidade populacional, distando 2 227 quilômetros de
+							Brasília, a capital federal.</p>
+						<p>Fundada em 1599, às margens do Rio Potenji, a cidade é conhecida mundialmente e conta com importantes
+							monumentos, parques e museus e pontos turísticos, como o Teatro Alberto Maranhão e a Coluna Capitolina Del
+							Pretti, no Centro Histórico, além de outras atrações como a Ponte Newton Navarro, o Museu Câmara Cascudo, o
+							Parque da Cidade Dom Nivaldo Monte, o Museu de Cultura Popular, o Parque das Dunas, a Catedral Metropolitana e
+							praias como Ponta Negra e dos Artistas, e eventos de grande repercussão, como a Feira Internacional de
+							Artesanato (FIART), o Carnatal, as festas juninas e as comemorações natalinas. É também conhecida como a
+							"Capital Espacial do Brasil", devido às operações da primeira base de foguetes da América do Sul, o Centro de
+							Lançamento da Barreira do Inferno, hoje localizada no município limítrofe de Parnamirim.</p>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="portoseguro">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Porto Seguro</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/portoseguro.jpg" alt="Conheça a Travel Turismo" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p><strong>Porto Seguro</strong> é um município situado no sul do estado da Bahia, no Brasil. Compartilha, com os
+							municípios limítrofes de Santa Cruz Cabrália e Prado, a primazia de ser o local de chegada dos portugueses ao
+							Brasil em 1500. O vilarejo que deu origem ao município de Porto Seguro foi fundado em 1535. Possui uma população
+							estimada em 145.431 habitantes (2015) e está tombado em quase sua totalidade pelo patrimônio histórico, não
+							sendo permitida a construção de prédios altos (com mais de dois andares). É cortado pelo Rio Buranhém.</p>
+						<p>Litoral e praias</p>
+						<p>O município de Porto Seguro conta com um extenso litoral, com cerca de 85 km, de praias de areia fina, branca
+							que está dividido pela foz do rio Buranhém, rio que conta com cerca de quinhentos metros de largura na sua foz,
+							em litorais norte e sul. O litoral norte possui uma infraestrutura de nível internacional e o litoral sul também
+							está chegando a esse nível.</p>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="depoimentos">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Depoimentos</h2>
+					</div>
+
+					<div class="container">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/rostos/01.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Conhecer lugares de sonho, novas culturas, novas pessoas! Viajar faz bem para o corpo, a mente e à alma.
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/rostos/02.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Conhecer lugares de sonho, novas culturas, novas pessoas! Viajar faz bem para o corpo, a mente e à alma.
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/rostos/03.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Conhecer lugares de sonho, novas culturas, novas pessoas! Viajar faz bem para o corpo, a mente e à alma.
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/rostos/04.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Conhecer lugares de sonho, novas culturas, novas pessoas! Viajar faz bem para o corpo, a mente e à alma.
+										</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- início da galeria -->
+
+	<section id="galeria">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Galeria</h2>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<img src="imagens/galeria/01.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/10.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/03.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/04.jpeg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/06.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/07.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/08.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/galeria/09.jpg" class="thumbnail" width="120" style="float:left;" />
+			</div>
+		</div>
+	</section>
+
+	<div id="popup">
+		<div id="center">
+			<img id="lightbox" src="imagens/01.jpg" />
+			<img id="close" src="imagens/close.png" alt="close" />
+
+		</div> <!-- #center -->
+	</div> <!-- #popup -->
+	<!-- Fim da Galeria -->
+
+	<!-- início do formulário -->
+	<section id="faleconosco">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Fale Conosco</h2>
+					</div>
+
+					<div class="col-xs-12">
+						<form class="form-horizontal">
+							<div class="form-group has-info">
+								<label for="nome" class="col-xs-2 control-label">
+									Nome Completo:
+								</label>
+								<div class="col-xs-10">
+									<input type="text" class="form-control" id="nome" />
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group has-info">
+								<label for="email" class="col-xs-2 control-label">
+									E-mail:
+								</label>
+								<div class="col-xs-10">
+									<input type="email" class="form-control" id="email" />
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<label for="assunto" class="col-xs-2 control-label">
+									Assunto:
+								</label>
+								<div class="col-xs-10">
+									<select class="form-conytol" id="assunto">
+										<option></option>
+										<option>Elogio</option>
+										<option>Reclamação</option>
+										<option>Câmbio</option>
+										<option>Cotação de Preços</option>
+										<option>Outros assuntos</option>
+									</select>
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<label for="nome" class="col-xs-2 control-label">
+									É nosso cliente?:
+								</label>
+								<div class="col-xs-10 radio">
+									<label>
+										<input type="radio" name="cliente" id="id1" value="Sim">
+										Sim
+									</label>
+
+									<label>
+										<input type="radio" name="cliente" id="id2" value="Não">
+										Não
+									</label>
+
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group has-info">
+								<label for="mensagem" class="col-xs-2 control-label">
+									Mensagem:
+								</label>
+								<div class="col-xs-10">
+									<textarea class="form-control" id="mensagem" rows="8" style="resize:none;">
+									</textarea>
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<div class="col-xs-offset-2 col-xs-2">
+									<button type="submit" class="btn btn-success">
+										Enviar Formulário
+									</button>
+								</div>
+
+								<div class="col-xs-2">
+									<button type="reset" class="btn btn-success">
+										Limpar
+									</button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Final do formulário -->
+
+	<!-- início do footer -->
+	<footer>
+		<div class="row">
+			<div class="col-xs-12">
+				<strong>Escritório Central:</strong>
+				Avenida Brasil, 1150 Nova Veneza - Campinas/SP<br/>
+				Tel: 0800-252635<br/>
+				E-mail: turismo@travel.com.br
+			</div>
+		</div>
+	</footer>
+	<!-- Final do footer -->
+
+	<!-- fim da area de conteudo do site -->
+
+
+	<!-- script JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- inserindo JavaScript do Bootstrap -->
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

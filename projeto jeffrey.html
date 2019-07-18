@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Jeffrey Beer</title>
+	<meta charset="utf-8" />
+
+	<!-- define a viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- inserindo css do Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all" />
+
+	<!-- inserindo css do Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all" />
+
+	<!-- CSS personalizado -->
+	<link rel="stylesheet" href="css/estilos.css" media="all" />
+
+	<!-- JQuery da galeria -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$(".thumbnail").click(function () {
+				var address = $(this).attr("src");
+				$("#popup").fadeIn("slow");
+				$("#lightbox").attr("src", address);
+			});
+			$("#close").click(function () {
+				$("#popup").fadeOut("fast");
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		#popup {
+			background: #000000;
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+
+		#center {
+			border: 10px solid #121212;
+			margin: 6% auto;
+			width: 750px;
+		}
+
+		#close {
+			float: right;
+			position: absolute;
+			top: 12%;
+		}
+
+		​
+	</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Cabeçalho do menu -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Jeffrey Beer</a>
+			</div>
+
+			<!-- itens do menu -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="#quemsomos">A empresa</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locais<span
+							 class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#jeffreytubira">Jeffrey Tubira</a></li>
+							<li><a href="#tapipanema">Tap Ipanema</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#depoimentos">Depoimentos</a></li>
+					<li><a href="#galeria">Galeria</a></li>
+					<li><a href="#faleconosco">Fale conosco</a></li>
+				</ul>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	​
+	<!-- Slider da aplicação -->
+	<div class="divslider" style="background-color: black;">
+		<div class="container-slider">
+			<div class="col-xs-12 hidden-xs">
+				<div id="sliderprincipal" class="carousel slide" data-ride="carousel" data-interval="5000" style="width:100%;">
+
+					<ol class="carousel-indicators">
+						<li class="active" data-target="#sliderprincipal" data-slide-to="0"></li>
+						<li data-target="#sliderprincipal" data-slide-to="1"></li>
+						<li data-target="#sliderprincipal" data-slide-to="2"></li>
+						<li data-target="#sliderprincipal" data-slide-to="3"></li>
+					</ol>
+
+					<div class="carousel-inner" role="listbox">
+
+						
+						<div class="item active">
+							<img src="imagens/jeffrey/jeffrey12.jpg" alt="Imagem slider 01" style="width: 100%;" />
+						</div>
+
+						<div class="item">
+							<img src="imagens/jeffrey/jeffreyfabrica.jpg" alt="Imagem slider 02" style="width: 100%;" />
+						</div>
+
+						<div class="item">
+							<img src="imagens/jeffrey/images20.jpg" alt="Imagem slider 03" style="width: 100%;" />
+						</div>
+						<div class="item">
+							<img src="imagens/jeffrey/Jeffrey.jpg" alt="Imagem slider 04" style="width: 100%;" />
+						</div>
+					</div>
+
+					<!-- Controles -->
+
+					<a class="left carousel-control" href="#sliderprincipal" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+
+					<a class="right carousel-control" href="#sliderprincipal" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Próximo</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Fim do slider da aplicação -->​
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+				<div>
+					<i class=" fa-5x" aria-hidden="true">
+					</i>
+				</div>
+				<div class="caption">
+					<h3>Cervejas</h3>
+					<p>Aqui você encontra nossos sabores.</p>
+					<p><a href="http://jeffrey.com.br//" target="_blank" class="btn btn-success" role="button">Pesquisar</a></p>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+				<div>
+					<i class="fa -5x" aria-hidden="true"">
+					</i>
+				</div>
+				<div class=" caption">
+						<h3>Locais</h3>
+						<p>Os melhores pontos para degustar nossos produtos.</p>
+						<p><a href="http://jeffrey.com.br/" target="_blank" class="btn btn-success" role="button">Pesquisar</a></p>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="thumbnail">
+				<div>
+					<i class="fa -5x" aria-hidden="true">
+					</i>
+				</div>
+				<div class="caption">
+					<h3>Parcerias</h3>
+					<p>TTBurguer, Suddog da Roberta, Koni, Spetto.</p>
+					<p><a href="http://jeffrey.com.br/" target="_blank" class="btn btn-success" role="button">Pesquisar</a></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	
+
+	<!--area de conteudo do site-->
+	<section id="quemsomos">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Quem Somos</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/jeffrey/socios.jpg" alt="Conheça a Jeffrey Beer" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p><strong>A Jeffrey</strong> é uma cervejaria com o estilo de vida carioca, voltada à produção de cervejas especiais/gourmet. Jeffrey conta com um laboratório de cervejeiros que possuem experiência na arte de criar cervejas.
+Os idealizadores e sócios da Jeffrey são: 
+Gilson Val, Eduardo Brand, Renato Monteiro e Raphael Bloise,
+os quatro são amigos há mais de dez anos e apaixonados por cerveja e alta gastronomia; carregam para a Jeffrey seu expertise de negócios de outros ramos como comunicação, marketing, investimentos e cosméticos.</p>
+
+A marca Jeffrey é personificada por um pato carioca cosmopolita,
+que viaja pelo mundo e adapta para o Brasil essas experiências em forma de receitas e novas formas de degustar.
+
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		
+	</section>
+
+	<section id="nossosprodutos">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Nossos Produtos</h2>
+					</div>
+
+					<div class="col-xs-12">
+						<img src="imagens/jeffrey/Jeffrey 1nina.jpg" class="thumbnail" width="120" style="float:left;" />
+						<img src="imagens/jeffrey/jeffrey 2red.jpg" class="thumbnail" width="120" style="float:left;" />
+						<img src="imagens/jeffrey/Jeffrey 5Rio.jpg" class="thumbnail" width="120" style="float:left;" />
+						<img src="imagens/jeffrey/jeffrey 4tropicale.jpg" class="thumbnail" width="120" style="float:left;" />
+						<img src="imagens/jeffrey/sucos 1.jpg" class="thumbnail" width="120" style="float:left;" />
+					</div>
+
+					
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="tapipanema">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Tap Ipanema</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/jeffrey/tap-ipanema TT e Jeffrey.jpg" alt="Conheça a Jeffrey Beer" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p>Muita gente passa na esquina das ruas Maria Quitéria e Barão da Torre, em Ipanema, e nem imagina que ali existe um lugar interessante para reunir os amigos e beber aquele chope gelado. Aberta há oito meses, a Tap House da Cervejaria Jeffrey, em parceria com o T.T. Burguer, oferece uma experiência única em um ambiente que liga o rústico e moderno.
+
+Localizado no segundo andar da famosa hamburgueria do chef Thomas Troisgros, o espaço do famoso pato cervejeiro é pequeno, mas bem aconchegante, e ainda toca aquela música ambiente que deixa o clima muito agradável. Oito torneiras plugadas oferecem os chopes exclusivos da cervejaria. E para matar a fome, basta pedir um dos sanduíches do T.T. Burguer, além das deliciosas batatas para acompanhar.
+
+</p>
+						
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section id="jeffreytubira">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Jeffrey Tubira</h2>
+					</div>
+
+					<figure class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<img class="img-responsive" src="imagens/jeffrey/Jeffrey.jpg" alt="Conheça a Jeffrey Beer" />
+					</figure>
+
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<p>Para compartilhar com os amigos e clientes o universo cultural que os sócios respiram e admiram intensamente, eles criaram a Jeffrey Store, a loja-conceito da marca que foi, propositalmente, escolhida para abrir as portas em uma rua pouco frequentada pelos cariocas e popularmente conhecida como “rua das oficinas”. A ideia era revitalizar o local e tornar a região uma espécie de Soho carioca. E assim tem sido há mais de um ano. A sua galeria interna com exposições mensais e os diversos eventos culturais e gastronômicos que vem realizando já tornou a rua um point daqueles que curtem música, literatura, arte, moda, gastronomia e, é claro, cerveja. A cada evento, o público aumenta significativamente.</p>
+
+Visite
+Rua Tubira, 8 lj c - Leblon 
+Rio de Janeiro - RJ 
+Segunda a Sexta: 11 às 20h 
+Sábado: 12h às 18h
+						
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<section id="depoimentos">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Depoimentos</h2>
+					</div>
+
+					<div class="container">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/jeffrey/001.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Conhecer locais com sabores especiais, não tem preço.
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/jeffrey/002.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Depois de degustar essas cerjejas artesanais, cerveja não é tudo igual.
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/jeffrey/003.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Jeffrey não é uma cerveja e sim um sabor de sonhos.
+										</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<div class="thumbnail" style="background-color: #eee;">
+									<img src="imagens/jeffrey/004.jpg" class="img-thumbnail" alt="" />
+									<div class="caption">
+										<p style="font-style:oblique;">
+											Ambiente e Jeffrey, isso é combinação perfeita.
+										</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- início da galeria -->
+
+	<section id="galeria">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Galeria</h2>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<img src="imagens/jeffrey/Jeffrey.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/images20.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey1.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey10.png" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey11.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey12.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey13.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey2.jpg" class="thumbnail" width="120" style="float:left;" />
+                <img src="imagens/jeffrey/jeffrey3.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey4.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey5.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey6.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/jeffrey7.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/tap-ipanema TT e Jeffrey.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/latinha 001.jpg" class="thumbnail" width="120" style="float:left;" />
+				<img src="imagens/jeffrey/sucos 1.jpg" class="thumbnail" width="120" style="float:left;" />
+			</div>
+		</div>
+	</section>
+
+	<div id="popup">
+		<div id="center">
+			<img id="lightbox" src="imagens/jeffrey/images100.jpg" />
+			<img id="close" src="imagens/close.png" alt="close" />
+
+		</div> <!-- #center -->
+	</div> <!-- #popup -->
+	<!-- Fim da Galeria -->
+
+	<!-- início do formulário -->
+	<section id="faleconosco">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h2>Fale Conosco</h2>
+					</div>
+
+					<div class="col-xs-12">
+						<form class="form-horizontal">
+							<div class="form-group has-info">
+								<label for="nome" class="col-xs-2 control-label">
+									Nome Completo:
+								</label>
+								<div class="col-xs-10">
+									<input type="text" class="form-control" id="nome" />
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group has-info">
+								<label for="email" class="col-xs-2 control-label">
+									E-mail:
+								</label>
+								<div class="col-xs-10">
+									<input type="email" class="form-control" id="email" />
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<label for="assunto" class="col-xs-2 control-label">
+									Assunto:
+								</label>
+								<div class="col-xs-10">
+									<select class="form-conytol" id="assunto">
+										<option></option>
+										<option>Elogio</option>
+										<option>Reclamação</option>
+										<option>Câmbio</option>
+										<option>Cotação de Preços</option>
+										<option>Outros assuntos</option>
+									</select>
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<label for="nome" class="col-xs-2 control-label">
+									É nosso cliente?:
+								</label>
+								<div class="col-xs-10 radio">
+									<label>
+										<input type="radio" name="cliente" id="id1" value="Sim">
+										Sim
+									</label>
+
+									<label>
+										<input type="radio" name="cliente" id="id2" value="Não">
+										Não
+									</label>
+
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<label for="nome" class="col-xs-2 control-label">
+									É maior de 18 anos?:
+								</label>
+								<div class="col-xs-10 radio">
+									<label>
+										<input type="radio" name="cliente" id="id1" value="Sim">
+										Sim
+									</label>
+
+									<label>
+										<input type="radio" name="cliente" id="id2" value="Não">
+										Não
+									</label>
+
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group has-info">
+								<label for="mensagem" class="col-xs-2 control-label">
+									Mensagem:
+								</label>
+								<div class="col-xs-10">
+									<textarea class="form-control" id="mensagem" rows="8" style="resize:none;">
+									</textarea>
+								</div>
+							</div>
+
+							<p>&nbsp;</p>
+
+							<div class="form-group">
+								<div class="col-xs-offset-2 col-xs-2">
+									<button type="submit" class="btn btn-success">
+										Enviar Formulário
+									</button>
+								</div>
+
+								<div class="col-xs-2">
+									<button type="reset" class="btn btn-success">
+										Limpar
+									</button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Final do formulário -->
+
+	<!-- início do footer -->
+	<footer>
+		<div class="row">
+			<div class="col-xs-12">
+				<strong>Escritório Central:</strong>
+				Rua Tubira, 46  Leblon Rio de Janeiro-RJ<br/>
+				Tel: 2255-0573<br/>
+				E-mail: jeffrey.com.br
+			</div>
+		</div>
+	</footer>
+	<!-- Final do footer -->
+
+	<!-- fim da area de conteudo do site -->
+
+
+	<!-- script JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- inserindo JavaScript do Bootstrap -->
+	<!-- Última versão JavaScript compilada e minificada -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
